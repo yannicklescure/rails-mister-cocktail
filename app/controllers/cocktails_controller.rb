@@ -28,4 +28,8 @@ class CocktailsController < ApplicationController
   def cocktail_params
     params.require(:cocktail).permit(:name)
   end
+
+  def capitalize_first_letter(str)
+    str.split(' ').map { |e| e.downcase.capitalize }.join(' ')
+  end
 end
