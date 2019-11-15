@@ -4,6 +4,9 @@
 <ul class="list-unstyled">
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name.downcase.capitalize, cocktail_path(cocktail) %></li>
+    <% unless cocktail[:photo].nil? %>
+      <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <% end %>
   <% end %>
 </ul>
 <p class="mt-3"><%= link_to raw('<i class="fas fa-plus"></i> add new cocktail'), new_cocktail_path %></p>
