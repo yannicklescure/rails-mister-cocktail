@@ -2,6 +2,7 @@
 <p>Find me in app/views/cocktails/show.html.erb</p>
 <hr>
 <p><%= @cocktail.name.downcase.capitalize %></p>
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <hr>
 <ul class="list-unstyled">
   <% @doses.each do |dose| %>

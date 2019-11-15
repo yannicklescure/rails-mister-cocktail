@@ -7,3 +7,11 @@
   <% end %>
 </ul>
 <p class="mt-3"><%= link_to raw('<i class="fas fa-plus"></i> add new cocktail'), new_cocktail_path %></p>
+
+<!-- app/views/articles/index.html.erb -->
+<%= cl_image_tag("esag2eogowcoi6ljp2cs",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("y4fd9lifb3fiu30v7p1z",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>

@@ -18,7 +18,8 @@ cocktails_attributes = [
 
 Ingredient.create!(cocktails_attributes)
 
-# Ingredient.create(name: "lemon")
-# Ingredient.create(name: "ice")
-# Ingredient.create(name: "mint leaves")
+url = 'http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png'
+cocktail = Cocktail.new(name: 'NES')
+cocktail.remote_photo_url = url
+cocktail.save
 puts 'Finished!'
