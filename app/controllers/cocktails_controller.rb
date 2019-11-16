@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    # raise
   end
 
   def new
@@ -29,7 +30,7 @@ class CocktailsController < ApplicationController
     params.require(:cocktail).permit(:name, :photo)
   end
 
-  def capitalize_first_letter(str)
-    str.split(' ').map { |e| e.downcase.capitalize }.join(' ')
+  def capitalize_first_letter
+    params[:name].split(' ').map { |e| e.downcase.capitalize }.join(' ')
   end
 end
