@@ -3,7 +3,7 @@
 <hr>
 <p><%= @cocktail.name.downcase.capitalize %></p>
 <% unless @cocktail[:photo].nil? %>
-  <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @cocktail.photo, height: 300, width: 500, crop: :lfill %>
 <% end %>
 <hr>
 <ul class="list-unstyled">

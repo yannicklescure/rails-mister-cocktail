@@ -10,7 +10,7 @@
   <% unless cocktail[:photo].nil? %>
     <div class="div col col-md-6 col-lg-4">
       <div class="card bg-dark text-white">
-        <%= cl_image_tag cocktail.photo, width: 500, height: 300, crop: :fill, class: "card-img" %>
+        <%= cl_image_tag cocktail.photo, width: 500, height: 300, crop: :lfill, class: "card-img" %>
         <div class="card-img-overlay">
           <%= link_to capitalize_first_letter(cocktail.name), cocktail_path(cocktail), class: 'h5 text-white text-decoration-none stretched-link' %>
         </div>
